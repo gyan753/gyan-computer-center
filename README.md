@@ -1,2 +1,2 @@
-# iist-computer-institute-branch-
-Online Admission Form for IIST Computer Institute – Courses, Payment &amp; Student Registration
+# GYAN COMPUTER & COACHING CENTER
+Online Admission Form for Gyan computer & Coaching Center, Payment &amp; Student Registration
