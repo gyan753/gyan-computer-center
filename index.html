@@ -3,73 +3,406 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>Gyan Computer & Coaching Center - Student Admission Form</title>
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#eef5fb;font-family:Arial,Helvetica,sans-serif;color:#123f78}
-.wrap{max-width:1150px;margin:15px auto;background:#fff;border:3px solid #149fe3;border-radius:14px;overflow:hidden;box-shadow:0 5px 22px #0002}
-header{padding:16px 20px;text-align:center;border-bottom:1px solid #cde8f7}
-.logo{float:left;width:95px;height:95px;border:3px solid #1760a8;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;font-weight:900;color:#1760a8}
-h1{margin:5px 0;color:#073d86;font-size:38px}
-h2{margin:0 0 8px;color:#d51616;font-size:21px}
-.tag{font-weight:700;color:#14549a}
-.info{clear:both;margin-top:12px;padding:9px;background:#f1f8fd;border:1px solid #b8def4;border-radius:8px;font-size:13px;line-height:1.65}
-.title{margin:13px 16px;background:#0755a4;color:#fff;text-align:center;padding:13px;border-radius:8px;font-size:30px;font-weight:800}
-.note{margin:0 16px 14px;padding:13px 16px;background:#fffbea;border:2px solid #e3a400;border-radius:9px;color:#3d3200;line-height:1.5}
-.note h3{margin:0 0 7px;color:#a36b00}
-.layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:14px;margin:0 16px}
-.section{border:2px solid #58b9ee;border-radius:9px;overflow:hidden;margin-bottom:14px}
-.st{background:#e6f5ff;padding:9px 13px;font-size:19px;font-weight:800;color:#0b4f93}
-.sb{padding:13px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-label{display:block;font-weight:700;margin-bottom:5px;color:#174f8d}
-input,select,textarea{width:100%;padding:9px;border:2px solid #78c4ed;border-radius:5px;font-size:14px;background:#fff}
-textarea{min-height:80px;resize:vertical}
-.req{color:#d00}
-.photo{height:135px;border:2px solid #1760a8;border-radius:5px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#1760a8;font-weight:bold}
-.photo img{width:100%;height:100%;object-fit:cover;display:none}
-table{width:100%;border-collapse:collapse;margin-top:10px}
-th,td{border:1px solid #b5dced;padding:8px;text-align:left;font-size:14px}
-th{background:#e8f6ff}
-.courseinfo{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin-top:10px;padding:10px;background:#f2f9ff;border:1px solid #76c5ec;border-radius:7px;font-weight:700}
-.fee{color:#d51616;font-size:19px}
-.paybox{position:sticky;top:10px}
-.qrbox{text-align:center;border:2px solid #159fe3;border-radius:10px;padding:12px;background:#fff}
-.qrbox img{width:235px;height:235px;image-rendering:auto}
-.payamount{font-size:25px;font-weight:800;color:#d51616;margin:4px}
-.paybtn,.submitbtn,.printbtn,.resetbtn{border:0;border-radius:7px;padding:11px 14px;font-weight:800;cursor:pointer;font-size:15px}
-.paybtn{background:#1760a8;color:#fff;width:100%;margin-top:8px}
-.submitbtn{background:#159447;color:#fff}
-.printbtn{background:#0755a4;color:#fff}
-.resetbtn{background:#777;color:#fff}
-.status{margin-top:10px;padding:10px;border-radius:7px;background:#f4f8ff;font-size:13px;line-height:1.5}
-.success{display:none;text-align:center;border:2px solid #18a957;background:#effff5;padding:20px;border-radius:10px;margin:16px}
-.success h2{color:#12934a;font-size:28px}
-.actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;padding:14px}
-.decl{line-height:1.5;background:#f8fbfd;border:1px solid #c8e4f5;padding:11px}
-.small{font-size:12px;color:#555}
-footer{text-align:center;padding:13px;background:#f1f8fd;font-size:13px}
 
-@media(max-width:850px){
-.layout{grid-template-columns:1fr}
-.paybox{position:static}
-.grid{grid-template-columns:1fr}
-.courseinfo{grid-template-columns:1fr}
-.logo{float:none;margin:0 auto 5px;width:75px;height:75px;font-size:21px}
-h1{font-size:28px}
-h2{font-size:17px}
-.title{font-size:23px}
+body{
+  margin:0;
+  background:#eef5fb;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#123f78
 }
 
+.wrap{
+  max-width:1150px;
+  margin:15px auto;
+  background:#fff;
+  border:3px solid #149fe3;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 5px 22px #0002
+}
+
+header{
+  padding:16px 20px;
+  text-align:center;
+  border-bottom:1px solid #cde8f7
+}
+
+.logo{
+  float:left;
+  width:95px;
+  height:95px;
+  border:3px solid #1760a8;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:27px;
+  font-weight:900;
+  color:#1760a8
+}
+
+h1{
+  margin:5px 0;
+  color:#073d86;
+  font-size:38px
+}
+
+h2{
+  margin:0 0 8px;
+  color:#d51616;
+  font-size:21px
+}
+
+.tag{
+  font-weight:700;
+  color:#14549a
+}
+
+.info{
+  clear:both;
+  margin-top:12px;
+  padding:9px;
+  background:#f1f8fd;
+  border:1px solid #b8def4;
+  border-radius:8px;
+  font-size:13px;
+  line-height:1.65
+}
+
+.title{
+  margin:13px 16px;
+  background:#0755a4;
+  color:#fff;
+  text-align:center;
+  padding:13px;
+  border-radius:8px;
+  font-size:30px;
+  font-weight:800
+}
+
+.note{
+  margin:0 16px 14px;
+  padding:13px 16px;
+  background:#fffbea;
+  border:2px solid #e3a400;
+  border-radius:9px;
+  color:#3d3200;
+  line-height:1.6
+}
+
+.note h3{
+  margin:0 0 10px;
+  color:#a36b00;
+  font-size:19px
+}
+
+.note p{
+  margin:10px 0
+}
+
+.layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 330px;
+  gap:14px;
+  margin:0 16px
+}
+
+.section{
+  border:2px solid #58b9ee;
+  border-radius:9px;
+  overflow:hidden;
+  margin-bottom:14px
+}
+
+.st{
+  background:#e6f5ff;
+  padding:9px 13px;
+  font-size:19px;
+  font-weight:800;
+  color:#0b4f93
+}
+
+.sb{
+  padding:13px
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px
+}
+
+label{
+  display:block;
+  font-weight:700;
+  margin-bottom:5px;
+  color:#174f8d
+}
+
+input,select,textarea{
+  width:100%;
+  padding:9px;
+  border:2px solid #78c4ed;
+  border-radius:5px;
+  font-size:14px;
+  background:#fff
+}
+
+textarea{
+  min-height:80px;
+  resize:vertical
+}
+
+.req{
+  color:#d00
+}
+
+.photo{
+  height:135px;
+  border:2px solid #1760a8;
+  border-radius:5px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  color:#1760a8;
+  font-weight:bold
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:none
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px
+}
+
+th,td{
+  border:1px solid #b5dced;
+  padding:8px;
+  text-align:left;
+  font-size:14px
+}
+
+th{
+  background:#e8f6ff
+}
+
+.courseinfo{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:10px;
+  margin-top:10px;
+  padding:10px;
+  background:#f2f9ff;
+  border:1px solid #76c5ec;
+  border-radius:7px;
+  font-weight:700
+}
+
+.fee{
+  color:#d51616;
+  font-size:19px
+}
+
+.paybox{
+  position:sticky;
+  top:10px
+}
+
+.qrbox{
+  text-align:center;
+  border:2px solid #159fe3;
+  border-radius:10px;
+  padding:12px;
+  background:#fff
+}
+
+.qrbox img{
+  width:235px;
+  height:235px;
+  image-rendering:auto
+}
+
+.payamount{
+  font-size:25px;
+  font-weight:800;
+  color:#d51616;
+  margin:4px
+}
+
+.paybtn,
+.submitbtn,
+.printbtn,
+.resetbtn{
+  border:0;
+  border-radius:7px;
+  padding:11px 14px;
+  font-weight:800;
+  cursor:pointer;
+  font-size:15px
+}
+
+.paybtn{
+  background:#1760a8;
+  color:#fff;
+  width:100%;
+  margin-top:8px
+}
+
+.submitbtn{
+  background:#159447;
+  color:#fff
+}
+
+.printbtn{
+  background:#0755a4;
+  color:#fff
+}
+
+.resetbtn{
+  background:#777;
+  color:#fff
+}
+
+.status{
+  margin-top:10px;
+  padding:10px;
+  border-radius:7px;
+  background:#f4f8ff;
+  font-size:13px;
+  line-height:1.5
+}
+
+.success{
+  display:none;
+  text-align:center;
+  border:2px solid #18a957;
+  background:#effff5;
+  padding:20px;
+  border-radius:10px;
+  margin:16px
+}
+
+.success h2{
+  color:#12934a;
+  font-size:28px
+}
+
+.actions{
+  display:flex;
+  gap:9px;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:14px
+}
+
+.decl{
+  line-height:1.5;
+  background:#f8fbfd;
+  border:1px solid #c8e4f5;
+  padding:11px
+}
+
+.small{
+  font-size:12px;
+  color:#555
+}
+
+footer{
+  text-align:center;
+  padding:13px;
+  background:#f1f8fd;
+  font-size:13px
+}
+
+/* DISCLAIMER HIGHLIGHT */
+.disclaimer-highlight{
+  background:#fff4f4;
+  border:2px solid #d51616;
+  border-radius:8px;
+  padding:12px;
+  margin-top:12px;
+  color:#6b0000;
+}
+
+.disclaimer-highlight strong{
+  color:#b00000;
+}
+
+/* MOBILE */
+@media(max-width:850px){
+
+  .layout{
+    grid-template-columns:1fr
+  }
+
+  .paybox{
+    position:static
+  }
+
+  .grid{
+    grid-template-columns:1fr
+  }
+
+  .courseinfo{
+    grid-template-columns:1fr
+  }
+
+  .logo{
+    float:none;
+    margin:0 auto 5px;
+    width:75px;
+    height:75px;
+    font-size:21px
+  }
+
+  h1{
+    font-size:28px
+  }
+
+  h2{
+    font-size:17px
+  }
+
+  .title{
+    font-size:23px
+  }
+}
+
+/* PRINT */
 @media print{
-body{background:#fff}
-.wrap{border:0;box-shadow:none;margin:0;max-width:none}
-.actions,.paybox{display:none}
+
+  body{
+    background:#fff
+  }
+
+  .wrap{
+    border:0;
+    box-shadow:none;
+    margin:0;
+    max-width:none
+  }
+
+  .actions,
+  .paybox{
+    display:none
+  }
 }
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
 </head>
 
 <body>
@@ -77,41 +410,124 @@ body{background:#fff}
 <div class="wrap">
 
 <header>
+
 <div class="logo">GCC</div>
 
 <h1>GCC</h1>
+
 <h2>GYAN COMPUTER CENTER</h2>
 
 <div class="tag">
-Online Computer Education &nbsp; | &nbsp; Online Classes &nbsp; | &nbsp; Online Exam &nbsp; | &nbsp; Certificate
+Online Computer Education &nbsp; | &nbsp;
+Online Classes &nbsp; | &nbsp;
+Online Exam &nbsp; | &nbsp;
+Certificate
 </div>
 
 <div class="info">
+
 <b>Centre Director Name:</b> Prop. Mr. Pankaj Murmu &nbsp; | &nbsp;
+
 <b>Centre Contact:</b> 7481955382 &nbsp; | &nbsp;
-<b>Centre Email Id:</b> pankajmurmu74819@gmail.com<br>
+
+<b>Centre Email Id:</b> pankajmurmu74819@gmail.com
+
+<br>
 
 <b>ACT CODE:</b> JH/IIST/103 &nbsp; | &nbsp;
+
 <b>FRANCHISEE CERTIFICATE NO:</b> IIST0353 &nbsp; | &nbsp;
+
 <b>ISSUE DATE:</b> 12-SEP-2026
+
 </div>
+
 </header>
 
-<div class="title">STUDENT ADMISSION FORM</div>
+
+<div class="title">
+STUDENT ADMISSION FORM
+</div>
+
+
+<!-- IMPORTANT NOTICE -->
 
 <div class="note">
-<h3>IMPORTANT NOTE</h3>
 
-<p><b>1.</b> Students को ईमानदारी के साथ Online Exam देना होगा, क्योंकि इसी आधार पर आपकी Marksheet और Certificate जारी किए जाएंगे। अगर आप बिना सीखे/बिना तैयारी के Exam देते हैं, तो उसकी जिम्मेदारी स्वयं आपकी होगी। यदि भविष्य में आप किसी Job के लिए Apply करते हैं और Interview में किसी Question का Answer या Practical नहीं कर पाते हैं, तो उसकी जिम्मेदारी भी आपकी स्वयं की होगी।</p>
+<h3>⚠️ IMPORTANT NOTICE</h3>
 
-<p><b>2.</b> Form को अच्छी तरह देखकर सही-सही भरें, क्योंकि यही जानकारी आपके Certificate और Marksheet में दर्ज रहेगी।</p>
+<p>
+<b>1.</b> Students को ईमानदारी के साथ Online Exam देना होगा, क्योंकि इसी आधार पर आपकी Marksheet और Certificate जारी किए जाएंगे। अगर आप बिना सीखे/बिना तैयारी के Exam देते हैं, तो उसकी जिम्मेदारी स्वयं आपकी होगी। यदि भविष्य में आप किसी Job के लिए Apply करते हैं और Interview में किसी Question का Answer या Practical नहीं कर पाते हैं, तो उसकी जिम्मेदारी भी आपकी स्वयं की होगी।
+</p>
 
-<p><b>3.</b> Course पूरा होने के बाद ही आप अपना Online Exam दे सकते हैं।</p>
+<p>
+<b>2.</b> Form को अच्छी तरह देखकर सही-सही भरें, क्योंकि यही जानकारी आपके Certificate और Marksheet में दर्ज रहेगी।
+</p>
 
-<p><b>4.</b> Online Exam देने के बाद आप Website से अपनी Marksheet और Certificate Download कर सकेंगे।</p>
+<p>
+<b>3.</b> Course पूरा होने के बाद ही आप अपना Online Exam दे सकते हैं।
+</p>
 
-<p><b>5.</b> यदि आप Marksheet और Certificate की Soft Copy घर पर मंगाना चाहते हैं, तो इसके लिए अलग से ₹300 देना होगा। Website से Download की गई Marksheet और Certificate उतने ही Valid रहेंगे जितने घर पर मंगाई गई Soft Copy; दोनों की Validity समान होगी।</p>
+<p>
+<b>4.</b> Online Exam देने के बाद आप Website से अपनी Marksheet और Certificate Download कर सकेंगे।
+</p>
+
+<p>
+<b>5.</b> यदि आप Marksheet और Certificate की Soft Copy घर पर मंगाना चाहते हैं, तो इसके लिए अलग से ₹300 देना होगा। Website से Download की गई Marksheet और Certificate उतने ही Valid रहेंगे जितने घर पर मंगाई गई Soft Copy; दोनों की Validity समान होगी।
+</p>
+
+<div class="disclaimer-highlight">
+
+<h3 style="color:#b00000;margin-top:0;">
+⚠️ CERTIFICATE & MARKSHEET DISCLAIMER
+</h3>
+
+<p>
+<b>6.</b> इस वेबसाइट/ऑनलाइन माध्यम से विद्यार्थियों को
+<strong>Certificate एवं Marksheet Online Examination एवं निर्धारित प्रक्रिया के आधार पर</strong>
+प्रदान की जाती है।
+</p>
+
+<p>
+Certificate/Marksheet प्राप्त होना यह दर्शाता है कि विद्यार्थी ने संबंधित
+Course की निर्धारित <strong>Online Examination/Assessment प्रक्रिया पूरी की है।</strong>
+विद्यार्थी ने वास्तविक रूप से Computer का Practical Knowledge कितना प्राप्त किया है,
+इसका अभ्यास एवं जिम्मेदारी <strong>स्वयं विद्यार्थी की होगी।</strong>
+</p>
+
+<p>
+यदि कोई विद्यार्थी बिना अच्छी तरह सीखे या बिना पर्याप्त तैयारी के Examination देता है,
+तो उसके परिणाम एवं उससे संबंधित किसी भी समस्या की
+<strong>जिम्मेदारी Centre की नहीं होगी।</strong>
+इसके लिए विद्यार्थी स्वयं जिम्मेदार होगा।
+</p>
+
+<p>
+भविष्य में यदि विद्यार्थी इस Certificate/Marksheet का उपयोग
+<strong>Job, Admission, Scholarship, Training या अन्य किसी उद्देश्य</strong>
+के लिए करता है, तो Certificate/Marksheet की
+<strong>Authenticity/Validity Verification</strong>
+से संबंधित पुष्टि Centre द्वारा की जा सकती है।
+</p>
+
+<p>
+हालांकि, यदि विद्यार्थी Certificate/Marksheet प्राप्त करने के बाद भी
+Practical Computer कार्य करने में सक्षम नहीं है, तो इसकी
+<strong>जिम्मेदारी Centre की नहीं होगी।</strong>
+Practical Knowledge सीखना, उसका नियमित अभ्यास करना तथा आवश्यकता पड़ने पर
+उसे Practical रूप से सिद्ध करना <strong>विद्यार्थी की स्वयं की जिम्मेदारी होगी।</strong>
+</p>
+
+<p>
+<strong>अतः सभी विद्यार्थियों से अनुरोध है कि Certificate प्राप्त करने के साथ-साथ
+संबंधित Course का Theory एवं Practical Knowledge भी अच्छी तरह सीखें और
+नियमित अभ्यास करें।</strong>
+</p>
+
 </div>
+
+</div>
+
 
 <form id="form">
 
@@ -119,147 +535,298 @@ Online Computer Education &nbsp; | &nbsp; Online Classes &nbsp; | &nbsp; Online 
 
 <main>
 
+
+<!-- PERSONAL DETAILS -->
+
 <section class="section">
 
-<div class="st">1. PERSONAL DETAILS</div>
+<div class="st">
+1. PERSONAL DETAILS
+</div>
 
 <div class="sb">
 
 <div class="grid">
 
-<div>
-<label>Admission Year <span class="req">*</span></label>
-<input name="admissionYear" required placeholder="2026-27">
-</div>
 
 <div>
-<label>Date of Admission <span class="req">*</span></label>
-<input name="admissionDate" type="date" required>
+
+<label>
+Admission Year <span class="req">*</span>
+</label>
+
+<input
+name="admissionYear"
+required
+placeholder="2026-27"
+>
+
 </div>
 
-<div>
-<label>Student Name <span class="req">*</span></label>
-<input name="studentName" required>
-</div>
 
 <div>
-<label>Father's Name <span class="req">*</span></label>
-<input name="fatherName" required>
+
+<label>
+Date of Admission <span class="req">*</span>
+</label>
+
+<input
+name="admissionDate"
+type="date"
+required
+>
+
 </div>
 
-<div>
-<label>Mother's Name</label>
-<input name="motherName">
-</div>
 
 <div>
-<label>Date Of Birth <span class="req">*</span></label>
-<input name="dob" type="date" required>
+
+<label>
+Student Name <span class="req">*</span>
+</label>
+
+<input
+name="studentName"
+required
+>
+
 </div>
 
-<div>
-<label>Contact No. <span class="req">*</span></label>
-<input name="contact" inputmode="numeric" maxlength="10" required>
-</div>
 
 <div>
-<label>Parent's Contact <span class="small">(Optional)</span></label>
-<input name="parentContact" inputmode="numeric" maxlength="10" placeholder="Optional">
+
+<label>
+Father's Name <span class="req">*</span>
+</label>
+
+<input
+name="fatherName"
+required
+>
+
 </div>
 
+
 <div>
-<label>Gender <span class="req">*</span></label>
+
+<label>
+Mother's Name
+</label>
+
+<input
+name="motherName"
+>
+
+</div>
+
+
+<div>
+
+<label>
+Date Of Birth <span class="req">*</span>
+</label>
+
+<input
+name="dob"
+type="date"
+required
+>
+
+</div>
+
+
+<div>
+
+<label>
+Contact No. <span class="req">*</span>
+</label>
+
+<input
+name="contact"
+inputmode="numeric"
+maxlength="10"
+required
+>
+
+</div>
+
+
+<div>
+
+<label>
+Parent's Contact
+<span class="small">(Optional)</span>
+</label>
+
+<input
+name="parentContact"
+inputmode="numeric"
+maxlength="10"
+placeholder="Optional"
+>
+
+</div>
+
+
+<div>
+
+<label>
+Gender <span class="req">*</span>
+</label>
+
 <select name="gender" required>
-<option value="">Select Gender</option>
-<option>Male</option>
-<option>Female</option>
-<option>Other</option>
+
+<option value="">
+Select Gender
+</option>
+
+<option value="Male">
+Male
+</option>
+
+<option value="Female">
+Female
+</option>
+
+<option value="Other">
+Other
+</option>
+
 </select>
+
 </div>
 
+
 <div>
-<label>Marital Status</label>
-<select name="maritalStatus">
-<option value="">Select</option>
-<option>Unmarried</option>
-<option>Married</option>
-<option>Other</option>
+
+<label>
+Category <span class="req">*</span>
+</label>
+
+<select name="category" required>
+
+<option value="">
+Select Category
+</option>
+
+<option value="ST">
+ST
+</option>
+
+<option value="SC">
+SC
+</option>
+
+<option value="OBC">
+OBC
+</option>
+
+<option value="EWS">
+EWS
+</option>
+
+<option value="General">
+General
+</option>
+
 </select>
+
 </div>
 
-<div>
-<label>Medium of Study</label>
-<select name="medium">
-<option value="">Select</option>
-<option>Hindi</option>
-<option>English</option>
-<option>Hindi & English</option>
-</select>
-</div>
-
-<div>
-<label>Category</label>
-<select name="category">
-<option value="">Select</option>
-<option>General</option>
-<option>OBC</option>
-<option>SC</option>
-<option>ST</option>
-<option>EWS</option>
-<option>Other</option>
-</select>
-</div>
-
-<div>
-<label>Academic Background</label>
-<input name="academicBackground" placeholder="10th / 12th / Graduation">
-</div>
-
-<div>
-<label>Year in which passed</label>
-<input name="passedYear">
-</div>
-
-<div>
-<label>Choose Your Identity Type</label>
-<select name="identityType">
-<option value="">Select</option>
-<option>Aadhaar Card</option>
-<option>Voter ID</option>
-<option>Driving Licence</option>
-<option>Other</option>
-</select>
-</div>
-
-<div>
-<label>Id Number <span class="req">*</span></label>
-<input name="idNumber" required>
-</div>
-
-<div>
-<label>State <span class="req">*</span></label>
-<input name="state" value="Jharkhand" required>
-</div>
-
-<div>
-<label>District</label>
-<input name="district" value="Giridih">
-</div>
-
-<div>
-<label>Permanent Address</label>
-<textarea name="permanentAddress"></textarea>
-</div>
 
 <div>
 
-<label>Temporary Address</label>
+<label>
+Email <span class="req">*</span>
+</label>
 
-<textarea name="temporaryAddress" id="temporaryAddress"></textarea>
+<input
+name="email"
+type="email"
+required
+>
 
-<label style="font-weight:600;margin-top:6px;color:#1760a8">
+</div>
 
-<input type="checkbox" id="sameAddress" style="width:auto;margin-right:6px">
+
+<div>
+
+<label>
+Student Photo
+</label>
+
+<div class="photo">
+
+<span id="photoText">
+PHOTO
+</span>
+
+<img id="photo">
+
+</div>
+
+<input
+id="photoInput"
+type="file"
+accept="image/*"
+style="margin-top:6px"
+>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ADDRESS -->
+
+<section class="section">
+
+<div class="st">
+ADDRESS DETAILS
+</div>
+
+<div class="sb">
+
+<div class="grid">
+
+
+<div>
+
+<label>
+Permanent Address <span class="req">*</span>
+</label>
+
+<textarea
+name="permanentAddress"
+required
+></textarea>
+
+</div>
+
+
+<div>
+
+<label>
+Temporary Address
+</label>
+
+<textarea
+id="temporaryAddress"
+name="temporaryAddress"
+></textarea>
+
+<label style="margin-top:7px;font-weight:600">
+
+<input
+type="checkbox"
+id="sameAddress"
+style="width:auto"
+>
 
 Temporary Address same as Permanent Address
 
@@ -267,138 +834,310 @@ Temporary Address same as Permanent Address
 
 </div>
 
-<div>
-<label>Email Id <span class="req">*</span></label>
-<input name="email" type="email" required>
-</div>
 
 <div>
 
-<label>Student Photo</label>
+<label>
+State <span class="req">*</span>
+</label>
 
-<div class="photo">
+<select
+name="state"
+required
+>
 
-<span id="photoText">PHOTO</span>
+<option value="">
+Select State
+</option>
 
-<img id="photo">
+<option value="Jharkhand">
+Jharkhand
+</option>
+
+<option value="Bihar">
+Bihar
+</option>
+
+<option value="West Bengal">
+West Bengal
+</option>
+
+<option value="Odisha">
+Odisha
+</option>
+
+<option value="Other">
+Other
+</option>
+
+</select>
 
 </div>
 
-<input id="photoInput" type="file" accept="image/*" style="margin-top:6px">
+
+<div>
+
+<label>
+District <span class="req">*</span>
+</label>
+
+<input
+name="district"
+required
+placeholder="Enter District"
+>
+
+</div>
+
+
+<div>
+
+<label>
+Pin Code <span class="req">*</span>
+</label>
+
+<input
+name="pinCode"
+inputmode="numeric"
+maxlength="6"
+required
+>
+
+</div>
+
 
 </div>
 
 </div>
-</div>
+
 </section>
 
 
+<!-- COURSE -->
+
 <section class="section">
 
-<div class="st">2. CHOOSE COURSE</div>
+<div class="st">
+2. CHOOSE COURSE
+</div>
 
 <div class="sb">
 
-<label>Choose Course <span class="req">*</span></label>
+<label>
+Choose Course <span class="req">*</span>
+</label>
 
-<select id="course" name="course" required>
+<select
+id="course"
+name="course"
+required
+>
 
-<option value="">Please select a course</option>
+<option value="">
+Please select a course
+</option>
 
-<option value="BCS" data-duration="10 Days" data-fee="100">
+<option
+value="BCS"
+data-duration="10 Days"
+data-fee="100"
+>
 BCS - Basic Computer Skill Program | 10 Days | ₹100
 </option>
 
-<option value="BCC" data-duration="1 Month" data-fee="250">
+<option
+value="BCC"
+data-duration="1 Month"
+data-fee="250"
+>
 BCC - Basic Computer Course | 1 Month | ₹250
 </option>
 
-<option value="DCA" data-duration="6 Months" data-fee="350">
+<option
+value="DCA"
+data-duration="6 Months"
+data-fee="350"
+>
 DCA - Diploma in Computer Application | 6 Months | ₹350
 </option>
 
-<option value="DTP" data-duration="6 Months" data-fee="350">
+<option
+value="DTP"
+data-duration="6 Months"
+data-fee="350"
+>
 DTP - Desktop Publishing | 6 Months | ₹350
 </option>
 
-<option value="ADCA" data-duration="12 Months" data-fee="1000">
+<option
+value="ADCA"
+data-duration="12 Months"
+data-fee="1000"
+>
 ADCA - Advanced Diploma in Computer Application | 12 Months | ₹1000
 </option>
 
-<option value="Tally" data-duration="3 Months" data-fee="400">
+<option
+value="Tally"
+data-duration="3 Months"
+data-fee="400"
+>
 Tally - Only Tally Prime | 3 Months | ₹400
 </option>
 
 </select>
 
+
 <div class="courseinfo">
 
-<div>Selected: <span id="cname">—</span></div>
+<div>
+Selected:
+<span id="cname">—</span>
+</div>
 
-<div>Duration: <span id="cdur">—</span></div>
+<div>
+Duration:
+<span id="cdur">—</span>
+</div>
 
-<div>Fee: <span id="cfee" class="fee">₹0</span></div>
+<div>
+Fee:
+<span id="cfee" class="fee">₹0</span>
+</div>
 
 </div>
+
 
 <table>
 
 <thead>
+
 <tr>
-<th>Course</th>
-<th>Duration</th>
-<th>Fee</th>
+
+<th>
+Course
+</th>
+
+<th>
+Duration
+</th>
+
+<th>
+Fee
+</th>
+
 </tr>
+
 </thead>
+
 
 <tbody>
 
 <tr>
-<td>BCS - Basic Computer Skill Program</td>
-<td>10 Days</td>
-<td>₹100</td>
+<td>
+BCS - Basic Computer Skill Program
+</td>
+
+<td>
+10 Days
+</td>
+
+<td>
+₹100
+</td>
 </tr>
 
-<tr>
-<td>BCC - Basic Computer Course</td>
-<td>1 Month</td>
-<td>₹250</td>
-</tr>
 
 <tr>
-<td>DCA - Diploma in Computer Application</td>
-<td>6 Months</td>
-<td>₹350</td>
+<td>
+BCC - Basic Computer Course
+</td>
+
+<td>
+1 Month
+</td>
+
+<td>
+₹250
+</td>
 </tr>
 
-<tr>
-<td>DTP - Desktop Publishing</td>
-<td>6 Months</td>
-<td>₹350</td>
-</tr>
 
 <tr>
-<td>ADCA - Advanced Diploma in Computer Application</td>
-<td>12 Months</td>
-<td>₹1000</td>
+<td>
+DCA - Diploma in Computer Application
+</td>
+
+<td>
+6 Months
+</td>
+
+<td>
+₹350
+</td>
 </tr>
 
+
 <tr>
-<td>Tally - Only Tally Prime</td>
-<td>3 Months</td>
-<td>₹400</td>
+<td>
+DTP - Desktop Publishing
+</td>
+
+<td>
+6 Months
+</td>
+
+<td>
+₹350
+</td>
+</tr>
+
+
+<tr>
+<td>
+ADCA - Advanced Diploma in Computer Application
+</td>
+
+<td>
+12 Months
+</td>
+
+<td>
+₹1000
+</td>
+</tr>
+
+
+<tr>
+<td>
+Tally - Only Tally Prime
+</td>
+
+<td>
+3 Months
+</td>
+
+<td>
+₹400
+</td>
 </tr>
 
 </tbody>
+
 </table>
 
 </div>
+
 </section>
 
 
+<!-- DECLARATION -->
+
 <section class="section">
 
-<div class="st">3. DECLARATION</div>
+<div class="st">
+3. DECLARATION
+</div>
 
 <div class="sb">
 
@@ -406,37 +1145,60 @@ Tally - Only Tally Prime | 3 Months | ₹400
 
 <label>
 
-<input type="checkbox" id="declaration" required>
+<input
+type="checkbox"
+id="declaration"
+required
+>
 
-मैं घोषणा करता/करती हूँ कि ऊपर दी गई सभी जानकारी मेरी जानकारी के अनुसार सही है। मैं IIST Computer Institute के नियमों का पालन करूंगा/करूंगी और Course पूरा करने के बाद Online Exam ईमानदारी से दूंगा/दूंगी।
+मैं घोषणा करता/करती हूँ कि ऊपर दी गई सभी जानकारी मेरी जानकारी के अनुसार सही है।
+मैं Gyan Computer Center / IIST Computer Institute के नियमों का पालन
+करूंगा/करूंगी और Course पूरा करने के बाद Online Exam ईमानदारी से
+दूंगा/दूंगी।
 
 </label>
 
 </div>
 
 </div>
+
 </section>
+
 
 </main>
 
+
+<!-- PAYMENT -->
 
 <aside class="paybox">
 
 <section class="section">
 
-<div class="st">PAYMENT</div>
+<div class="st">
+PAYMENT
+</div>
 
 <div class="sb">
 
 <div class="qrbox">
 
-<b>Course Fee</b>
+<b>
+Course Fee
+</b>
 
-<div class="payamount" id="payAmount">₹0</div>
+<div
+class="payamount"
+id="payAmount"
+>
+₹0
+</div>
+
 
 <div>
 
-<div style="font-weight:800;color:#1760a8;margin-bottom:5px">
+<div
+style="font-weight:800;color:#1760a8;margin-bottom:5px"
+>
 Course Fee QR
 </div>
 
@@ -448,41 +1210,73 @@ Course select करने पर QR में उसी course की fee औ�
 
 </div>
 
-<p><b>Scan QR with any UPI App</b></p>
 
-<p class="small">
-UPI ID: <b>pankajmurmu@upi</b>
+<p>
+<b>
+Scan QR with any UPI App
+</b>
 </p>
 
-<button type="button" class="paybtn" id="payNow">
+
+<p class="small">
+
+UPI ID:
+<b>
+pankajmurmu@upi
+</b>
+
+</p>
+
+
+<button
+type="button"
+class="paybtn"
+id="payNow"
+>
 PAY NOW
 </button>
 
-<div class="status" id="payStatus">
+
+<div
+class="status"
+id="payStatus"
+>
 पहले Course चुनें। QR Code उसी Course की Fee के अनुसार बदलेगा।
 </div>
 
 </div>
 
 </div>
+
 </section>
 
 
+<!-- PAYMENT STATUS -->
+
 <section class="section">
 
-<div class="st">PAYMENT STATUS</div>
+<div class="st">
+PAYMENT STATUS
+</div>
 
 <div class="sb">
 
-<label>UPI Transaction / UTR No.</label>
+<label>
+UPI Transaction / UTR No.
+</label>
 
-<input id="utr" name="utr" placeholder="Payment के बाद UTR/Transaction No.">
+<input
+id="utr"
+name="utr"
+placeholder="Payment के बाद UTR/Transaction No."
+>
 
 <p class="small">
 Payment के बाद UTR डालना सुरक्षित verification के लिए उपयोगी है।
 </p>
 
 </div>
+
 </section>
 
 </aside>
@@ -490,17 +1284,31 @@ Payment के बाद UTR डालना सुरक्षित verificati
 </div>
 
 
+<!-- BUTTONS -->
+
 <div class="actions">
 
-<button type="button" class="printbtn" onclick="window.print()">
+<button
+type="button"
+class="printbtn"
+onclick="window.print()"
+>
 Print / Save PDF
 </button>
 
-<button type="submit" class="submitbtn">
+
+<button
+type="submit"
+class="submitbtn"
+>
 Submit Form
 </button>
 
-<button type="reset" class="resetbtn">
+
+<button
+type="reset"
+class="resetbtn"
+>
 Reset
 </button>
 
@@ -509,24 +1317,49 @@ Reset
 </form>
 
 
-<div class="success" id="success">
+<!-- SUCCESS -->
 
-<h2>✓ Thank You!</h2>
+<div
+class="success"
+id="success"
+>
 
-<h3>Your Form Submitted Successfully</h3>
+<h2>
+✓ Thank You!
+</h2>
 
-<p>आपका Admission Form सफलतापूर्वक submit हो गया है।</p>
+<h3>
+Your Form Submitted Successfully
+</h3>
 
-<button class="printbtn" onclick="window.print()">
+<p>
+आपका Admission Form सफलतापूर्वक submit हो गया है।
+</p>
+
+<button
+class="printbtn"
+onclick="window.print()"
+>
 Print / Save Form
 </button>
 
 </div>
 
 
+<!-- FOOTER -->
+
 <footer>
-IIST COMPUTER INSTITUTE &nbsp; | &nbsp; Skill for Better Future<br>
-Centre Contact: 7481955382 &nbsp; | &nbsp; pankajmurmu74819@gmail.com
+
+GYAN COMPUTER CENTER &nbsp; | &nbsp;
+Skill for Better Future
+
+<br>
+
+Centre Contact:
+7481955382
+&nbsp; | &nbsp;
+pankajmurmu74819@gmail.com
+
 </footer>
 
 </div>
@@ -535,110 +1368,153 @@ Centre Contact: 7481955382 &nbsp; | &nbsp; pankajmurmu74819@gmail.com
 <script>
 
 const UPI_ID="pankajmurmu@upi";
+
 const UPI_NAME="PANKAJ MURMU";
 
-/* YOUR GOOGLE APPS SCRIPT WEB APP URL */
+
+/* GOOGLE APPS SCRIPT WEB APP URL */
+
 const SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbwyprmL0Gg0wwlz-iyKMXke-D8goFgB04e5IVi2LLS1H0Ijp0NZBzwA0t9AbMMldsHpvw/exec";
 
 
 const course=document.getElementById("course");
+
 const qr=document.getElementById("qr");
+
 const payAmount=document.getElementById("payAmount");
+
 const cname=document.getElementById("cname");
+
 const cdur=document.getElementById("cdur");
+
 const cfee=document.getElementById("cfee");
+
 const payNow=document.getElementById("payNow");
+
 const payStatus=document.getElementById("payStatus");
 
 
+/* UPI URI */
+
 function makeUpiUri(){
 
-const opt=course.options[course.selectedIndex];
+  const opt=course.options[course.selectedIndex];
 
-const fee=opt?.dataset?.fee || "";
+  const fee=opt?.dataset?.fee || "";
 
-if(!fee) return "";
+  if(!fee) return "";
 
-return "upi://pay?pa="+
-encodeURIComponent(UPI_ID)+
-"&pn="+
-encodeURIComponent(UPI_NAME)+
-"&am="+
-encodeURIComponent(fee)+
-"&cu=INR&tn="+
-encodeURIComponent("IIST "+course.value+" Admission");
+  return "upi://pay?pa="+
+  encodeURIComponent(UPI_ID)+
+  "&pn="+
+  encodeURIComponent(UPI_NAME)+
+  "&am="+
+  encodeURIComponent(fee)+
+  "&cu=INR&tn="+
+  encodeURIComponent("IIST "+course.value+" Admission");
 
 }
 
+
+/* PAYMENT UPDATE */
 
 function updatePayment(){
 
-const opt=course.options[course.selectedIndex];
+  const opt=course.options[course.selectedIndex];
 
-qr.innerHTML="";
+  qr.innerHTML="";
 
-if(!course.value){
 
-payAmount.textContent="₹0";
-cname.textContent="—";
-cdur.textContent="—";
-cfee.textContent="₹0";
+  if(!course.value){
 
-payStatus.textContent=
-"पहले Course चुनें। QR Code उसी Course की Fee के अनुसार बदलेगा.";
+    payAmount.textContent="₹0";
 
-return;
+    cname.textContent="—";
+
+    cdur.textContent="—";
+
+    cfee.textContent="₹0";
+
+    payStatus.textContent=
+    "पहले Course चुनें। QR Code उसी Course की Fee के अनुसार बदलेगा.";
+
+    return;
+
+  }
+
+
+  const fee=opt.dataset.fee;
+
+  const duration=opt.dataset.duration;
+
+
+  cname.textContent=opt.value;
+
+  cdur.textContent=duration;
+
+  cfee.textContent="₹"+fee;
+
+  payAmount.textContent="₹"+fee;
+
+
+  const uri=makeUpiUri();
+
+
+  if(window.QRCode){
+
+    new QRCode(qr,{
+
+      text:uri,
+
+      width:235,
+
+      height:235,
+
+      correctLevel:QRCode.CorrectLevel.M
+
+    });
+
+  }
+
+
+  payStatus.innerHTML=
+  "QR में <b>₹"+fee+
+  "</b> का amount set है। Scan करके payment करें।";
 
 }
 
-const fee=opt.dataset.fee;
-const duration=opt.dataset.duration;
 
-cname.textContent=opt.value;
-cdur.textContent=duration;
-cfee.textContent="₹"+fee;
-payAmount.textContent="₹"+fee;
+course.addEventListener(
+"change",
+updatePayment
+);
 
-const uri=makeUpiUri();
 
-if(window.QRCode){
+/* PAY NOW */
 
-new QRCode(qr,{
-text:uri,
-width:235,
-height:235,
-correctLevel:QRCode.CorrectLevel.M
+payNow.addEventListener(
+"click",
+()=>{
+
+  const uri=makeUpiUri();
+
+
+  if(!uri){
+
+    alert("पहले Course select करें।");
+
+    return;
+
+  }
+
+
+  window.location.href=uri;
+
 });
 
-}
 
-payStatus.innerHTML=
-"QR में <b>₹"+fee+
-"</b> का amount set है। Scan करके payment करें।";
-
-}
-
-
-course.addEventListener("change",updatePayment);
-
-
-payNow.addEventListener("click",()=>{
-
-const uri=makeUpiUri();
-
-if(!uri){
-
-alert("पहले Course select करें।");
-
-return;
-
-}
-
-window.location.href=uri;
-
-});
-
+/* ADDRESS */
 
 const permanentAddress=
 document.querySelector('[name="permanentAddress"]');
@@ -650,37 +1526,43 @@ const sameAddress=
 document.getElementById("sameAddress");
 
 
-sameAddress.addEventListener("change",()=>{
+sameAddress.addEventListener(
+"change",
+()=>{
 
-if(sameAddress.checked){
+  if(sameAddress.checked){
 
-temporaryAddress.value=
-permanentAddress.value;
+    temporaryAddress.value=
+    permanentAddress.value;
 
-temporaryAddress.readOnly=true;
+    temporaryAddress.readOnly=true;
 
-}else{
+  }else{
 
-temporaryAddress.readOnly=false;
+    temporaryAddress.readOnly=false;
 
-temporaryAddress.value="";
+    temporaryAddress.value="";
 
-}
+  }
+
+});
+
+
+permanentAddress.addEventListener(
+"input",
+()=>{
+
+  if(sameAddress.checked){
+
+    temporaryAddress.value=
+    permanentAddress.value;
+
+  }
 
 });
 
 
-permanentAddress.addEventListener("input",()=>{
-
-if(sameAddress.checked){
-
-temporaryAddress.value=
-permanentAddress.value;
-
-}
-
-});
-
+/* PHOTO */
 
 const photoInput=
 document.getElementById("photoInput");
@@ -692,197 +1574,221 @@ const photoText=
 document.getElementById("photoText");
 
 
-photoInput.addEventListener("change",()=>{
+photoInput.addEventListener(
+"change",
+()=>{
 
-const f=photoInput.files[0];
+  const f=photoInput.files[0];
 
-if(!f)return;
+  if(!f)return;
 
-const r=new FileReader();
 
-r.onload=e=>{
+  const r=new FileReader();
 
-photo.src=e.target.result;
 
-photo.style.display="block";
+  r.onload=e=>{
 
-photoText.style.display="none";
+    photo.src=e.target.result;
 
-};
+    photo.style.display="block";
 
-r.readAsDataURL(f);
+    photoText.style.display="none";
+
+  };
+
+
+  r.readAsDataURL(f);
 
 });
 
 
 /* GOOGLE SHEET CONNECTION */
 
-document.getElementById("form").addEventListener("submit",async e=>{
+document.getElementById("form").addEventListener(
+"submit",
+async e=>{
 
-e.preventDefault();
-
-
-if(!e.target.checkValidity()){
-
-e.target.reportValidity();
-
-return;
-
-}
+  e.preventDefault();
 
 
-const selected=course.value;
+  if(!e.target.checkValidity()){
+
+    e.target.reportValidity();
+
+    return;
+
+  }
 
 
-if(!selected){
-
-alert("Please select a course.");
-
-return;
-
-}
+  const selected=course.value;
 
 
-const utr=
-document.getElementById("utr").value.trim();
+  if(!selected){
+
+    alert("Please select a course.");
+
+    return;
+
+  }
 
 
-if(!utr){
-
-const ok=confirm(
-"Payment के बाद UTR/Transaction No. डालना recommended है। क्या आप बिना UTR के submit करना चाहते हैं?"
-);
-
-if(!ok)return;
-
-}
+  const utr=
+  document.getElementById("utr").value.trim();
 
 
-const formData=
-new FormData(e.target);
+  if(!utr){
+
+    const ok=confirm(
+      "Payment के बाद UTR/Transaction No. डालना recommended है। क्या आप बिना UTR के submit करना चाहते हैं?"
+    );
 
 
-const data=
-new URLSearchParams();
+    if(!ok)return;
+
+  }
 
 
-/*
-Send all normal form fields
-to Google Apps Script
-*/
-
-for(const [key,value] of formData.entries()){
-
-if(typeof value==="string"){
-
-data.append(key,value);
-
-}
-
-}
+  const formData=
+  new FormData(e.target);
 
 
-/*
-Course fee automatically sent
-*/
-
-const selectedOption=
-course.options[course.selectedIndex];
-
-data.set(
-"fee",
-selectedOption.dataset.fee || ""
-);
+  const data=
+  new URLSearchParams();
 
 
-/*
-Student photo:
-Google Sheet में अभी photo का
-file name save होगा.
-*/
+  /* Send all normal form fields */
 
-if(photoInput.files.length>0){
+  for(
+    const [key,value]
+    of formData.entries()
+  ){
 
-data.set(
-"studentPhoto",
-photoInput.files[0].name
-);
+    if(typeof value==="string"){
 
-}else{
+      data.append(key,value);
 
-data.set("studentPhoto","");
+    }
 
-}
+  }
 
 
-/*
-Send data to Google Apps Script
-*/
+  /* Course fee automatically sent */
 
-try{
+  const selectedOption=
+  course.options[course.selectedIndex];
 
-await fetch(SCRIPT_URL,{
 
-method:"POST",
+  data.set(
+    "fee",
+    selectedOption.dataset.fee || ""
+  );
 
-mode:"no-cors",
 
-headers:{
-"Content-Type":
-"application/x-www-form-urlencoded;charset=UTF-8"
-},
+  /*
+  Student photo:
+  Google Sheet में अभी photo का
+  file name save होगा.
+  */
 
-body:data.toString()
+  if(photoInput.files.length>0){
+
+    data.set(
+      "studentPhoto",
+      photoInput.files[0].name
+    );
+
+  }else{
+
+    data.set(
+      "studentPhoto",
+      ""
+    );
+
+  }
+
+
+  /* Send data to Google Apps Script */
+
+  try{
+
+    await fetch(
+      SCRIPT_URL,
+      {
+
+        method:"POST",
+
+        mode:"no-cors",
+
+        headers:{
+          "Content-Type":
+          "application/x-www-form-urlencoded;charset=UTF-8"
+        },
+
+        body:data.toString()
+
+      }
+    );
+
+
+    /* After successful sending */
+
+    e.target.style.display="none";
+
+    document.getElementById(
+      "success"
+    ).style.display="block";
+
+
+    window.scrollTo({
+
+      top:0,
+
+      behavior:"smooth"
+
+    });
+
+
+  }catch(error){
+
+    console.error(error);
+
+
+    alert(
+      "Form submit नहीं हो पाया। कृपया Internet connection check करके दोबारा कोशिश करें।"
+    );
+
+  }
 
 });
 
 
-/*
-After successful sending,
-show success screen.
-*/
+/* RESET */
 
-e.target.style.display="none";
+document.getElementById("form").addEventListener(
+"reset",
+()=>{
 
-document.getElementById("success").style.display="block";
+  setTimeout(
+    ()=>{
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+      sameAddress.checked=false;
 
+      temporaryAddress.readOnly=false;
 
-}catch(error){
+      updatePayment();
 
-console.error(error);
-
-alert(
-"Form submit नहीं हो पाया। कृपया Internet connection check करके दोबारा कोशिश करें।"
-);
-
-}
+    },
+    50
+  );
 
 });
 
 
-document.getElementById("form").addEventListener("reset",()=>{
-
-setTimeout(()=>{
-
-sameAddress.checked=false;
-
-temporaryAddress.readOnly=false;
-
-updatePayment();
-
-},50);
-
-});
-
+/* INITIAL PAYMENT */
 
 updatePayment();
 
 </script>
 
 </body>
- </html>
+</html>
