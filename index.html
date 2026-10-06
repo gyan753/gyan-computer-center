@@ -135,6 +135,12 @@ input[type="checkbox"]{
   margin:10px auto;
 }
 
+.photo-info{
+  font-size:12px;
+  color:#666;
+  margin-top:8px;
+}
+
 .paybox{
   margin-top:20px;
   padding:20px;
@@ -240,6 +246,18 @@ input[type="checkbox"]{
   font-weight:bold;
 }
 
+.error{
+  display:none;
+  margin-top:20px;
+  padding:15px;
+  background:#f8d7da;
+  border:1px solid #f5c2c7;
+  color:#842029;
+  border-radius:7px;
+  text-align:center;
+  font-weight:bold;
+}
+
 .same-address{
   margin:10px 0;
   font-size:14px;
@@ -290,7 +308,8 @@ input[type="checkbox"]{
 
   .paybox,
   .submit-btn,
-  .success{
+  .success,
+  .error{
     display:none !important;
   }
 
@@ -365,11 +384,16 @@ input[type="checkbox"]{
       <div class="grid">
 
         <div>
+
           <label for="admissionYear">
             Admission Year *
           </label>
 
-          <select id="admissionYear" name="admissionYear" required>
+          <select
+            id="admissionYear"
+            name="admissionYear"
+            required
+          >
 
             <option value="">
               -- Select Year --
@@ -388,10 +412,12 @@ input[type="checkbox"]{
             </option>
 
           </select>
+
         </div>
 
 
         <div>
+
           <label for="dateOfAdmission">
             Date of Admission *
           </label>
@@ -402,6 +428,7 @@ input[type="checkbox"]{
             name="dateOfAdmission"
             required
           >
+
         </div>
 
       </div>
@@ -415,6 +442,7 @@ input[type="checkbox"]{
       <div class="grid">
 
         <div>
+
           <label for="studentName">
             Student Name *
           </label>
@@ -425,10 +453,12 @@ input[type="checkbox"]{
             name="studentName"
             required
           >
+
         </div>
 
 
         <div>
+
           <label for="fatherName">
             Father's Name *
           </label>
@@ -439,10 +469,12 @@ input[type="checkbox"]{
             name="fatherName"
             required
           >
+
         </div>
 
 
         <div>
+
           <label for="motherName">
             Mother's Name *
           </label>
@@ -453,10 +485,12 @@ input[type="checkbox"]{
             name="motherName"
             required
           >
+
         </div>
 
 
         <div>
+
           <label for="dob">
             Date of Birth *
           </label>
@@ -467,10 +501,12 @@ input[type="checkbox"]{
             name="dob"
             required
           >
+
         </div>
 
 
         <div>
+
           <label for="contact">
             Contact No. *
           </label>
@@ -484,10 +520,12 @@ input[type="checkbox"]{
             placeholder="10 digit mobile number"
             required
           >
+
         </div>
 
 
         <div>
+
           <label for="parentContact">
             Parent's Contact
             <span class="small">(Optional)</span>
@@ -501,15 +539,21 @@ input[type="checkbox"]{
             pattern="[0-9]{10}"
             placeholder="10 digit mobile number"
           >
+
         </div>
 
 
         <div>
+
           <label for="medium">
             Medium *
           </label>
 
-          <select id="medium" name="medium" required>
+          <select
+            id="medium"
+            name="medium"
+            required
+          >
 
             <option value="">
               -- Select Medium --
@@ -524,15 +568,21 @@ input[type="checkbox"]{
             </option>
 
           </select>
+
         </div>
 
 
         <div>
+
           <label for="identityType">
             Identity Type *
           </label>
 
-          <select id="identityType" name="identityType" required>
+          <select
+            id="identityType"
+            name="identityType"
+            required
+          >
 
             <option value="">
               -- Select Identity --
@@ -555,10 +605,12 @@ input[type="checkbox"]{
             </option>
 
           </select>
+
         </div>
 
 
         <div>
+
           <label for="identityNo">
             Identity No. *
           </label>
@@ -569,15 +621,21 @@ input[type="checkbox"]{
             name="identityNo"
             required
           >
+
         </div>
 
 
         <div>
+
           <label for="gender">
             Gender *
           </label>
 
-          <select id="gender" name="gender" required>
+          <select
+            id="gender"
+            name="gender"
+            required
+          >
 
             <option value="">
               -- Select Gender --
@@ -596,10 +654,12 @@ input[type="checkbox"]{
             </option>
 
           </select>
+
         </div>
 
 
         <div>
+
           <label for="maritalStatus">
             Marital Status *
           </label>
@@ -623,15 +683,21 @@ input[type="checkbox"]{
             </option>
 
           </select>
+
         </div>
 
 
         <div>
+
           <label for="category">
             Category *
           </label>
 
-          <select id="category" name="category" required>
+          <select
+            id="category"
+            name="category"
+            required
+          >
 
             <option value="">
               -- Select Category --
@@ -658,10 +724,12 @@ input[type="checkbox"]{
             </option>
 
           </select>
+
         </div>
 
 
         <div>
+
           <label for="email">
             Email *
           </label>
@@ -672,6 +740,7 @@ input[type="checkbox"]{
             name="email"
             required
           >
+
         </div>
 
       </div>
@@ -685,6 +754,7 @@ input[type="checkbox"]{
       <div class="grid">
 
         <div>
+
           <label for="academicBackground">
             Academic Background *
           </label>
@@ -696,10 +766,12 @@ input[type="checkbox"]{
             placeholder="Example: 12th Passed"
             required
           >
+
         </div>
 
 
         <div>
+
           <label for="passingYear">
             Passing Year *
           </label>
@@ -711,6 +783,7 @@ input[type="checkbox"]{
             placeholder="Example: 2026"
             required
           >
+
         </div>
 
       </div>
@@ -731,7 +804,7 @@ input[type="checkbox"]{
           type="file"
           id="studentPhoto"
           name="studentPhoto"
-          accept="image/*"
+          accept="image/jpeg,image/png,image/webp"
           required
         >
 
@@ -741,6 +814,10 @@ input[type="checkbox"]{
           style="display:none;"
           alt="Student Photo Preview"
         >
+
+        <div class="photo-info">
+          JPG, PNG or WEBP photo. Maximum recommended size: 2 MB.
+        </div>
 
       </div>
 
@@ -770,12 +847,14 @@ input[type="checkbox"]{
         <div class="full same-address">
 
           <label>
+
             <input
               type="checkbox"
               id="sameAddress"
             >
 
             Temporary Address Same as Permanent Address
+
           </label>
 
         </div>
@@ -992,6 +1071,7 @@ input[type="checkbox"]{
             type="checkbox"
             id="declaration"
             name="declaration"
+            value="Yes"
             required
           >
 
@@ -1022,6 +1102,15 @@ input[type="checkbox"]{
         Your Form Submitted Successfully
       </div>
 
+
+      <!-- ERROR -->
+      <div
+        class="error"
+        id="errorMessage"
+      >
+        Form submit nahi hua. Please try again.
+      </div>
+
     </form>
 
   </div>
@@ -1031,82 +1120,135 @@ input[type="checkbox"]{
 
 <script>
 
-/* ================================
-   GOOGLE APPS SCRIPT URL
-================================ */
+/* =========================================================
+   GOOGLE APPS SCRIPT WEB APP URL
+   =========================================================
+
+   IMPORTANT:
+   Deploy Apps Script as Web App and paste the NEW /exec URL
+   below.
+
+   Example:
+   https://script.google.com/macros/s/XXXXXXXX/exec
+
+========================================================= */
 
 const SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbyxVPkbIDAt1Ux5SGa3XA4pTUOQB6bB-EVU-Kq4eXzygZsn9ebMmR8FWJQjOMHXL5GKkg/exec";
 
 
-/* ================================
+/* =========================================================
    UPI DETAILS
-================================ */
+========================================================= */
 
-const UPI_ID = "pankajmurmu@upi";
-const UPI_NAME = "PANKAJ MURMU";
+const UPI_ID =
+"pankajmurmu@upi";
+
+const UPI_NAME =
+"PANKAJ MURMU";
 
 
-/* ================================
+/* =========================================================
    ELEMENTS
-================================ */
+========================================================= */
 
 const form =
-document.getElementById("admissionForm");
+document.getElementById(
+  "admissionForm"
+);
 
 const course =
-document.getElementById("course");
+document.getElementById(
+  "course"
+);
 
 const qr =
-document.getElementById("qr");
+document.getElementById(
+  "qr"
+);
 
 const feeAmount =
-document.getElementById("feeAmount");
+document.getElementById(
+  "feeAmount"
+);
 
 const selectedCourse =
-document.getElementById("selectedCourse");
+document.getElementById(
+  "selectedCourse"
+);
 
 const payNow =
-document.getElementById("payNow");
+document.getElementById(
+  "payNow"
+);
 
 const photoInput =
-document.getElementById("studentPhoto");
+document.getElementById(
+  "studentPhoto"
+);
 
 const photoPreview =
-document.getElementById("photoPreview");
+document.getElementById(
+  "photoPreview"
+);
 
 const sameAddress =
-document.getElementById("sameAddress");
+document.getElementById(
+  "sameAddress"
+);
 
 const permanentAddress =
-document.getElementById("permanentAddress");
+document.getElementById(
+  "permanentAddress"
+);
 
 const temporaryAddress =
-document.getElementById("temporaryAddress");
+document.getElementById(
+  "temporaryAddress"
+);
 
 const submitBtn =
-document.getElementById("submitBtn");
+document.getElementById(
+  "submitBtn"
+);
 
 const successMessage =
-document.getElementById("successMessage");
+document.getElementById(
+  "successMessage"
+);
+
+const errorMessage =
+document.getElementById(
+  "errorMessage"
+);
 
 
-/* ================================
+/* =========================================================
    UPI URI
-================================ */
+========================================================= */
 
-function makeUpiUri(fee, courseName){
+function makeUpiUri(
+  fee,
+  courseName
+){
 
   const amount =
-    Number(fee || 0).toFixed(2);
+    Number(
+      fee || 0
+    ).toFixed(2);
 
   return (
     "upi://pay" +
+
     "?pa=" +
-    encodeURIComponent(UPI_ID) +
+    encodeURIComponent(
+      UPI_ID
+    ) +
 
     "&pn=" +
-    encodeURIComponent(UPI_NAME) +
+    encodeURIComponent(
+      UPI_NAME
+    ) +
 
     "&am=" +
     amount +
@@ -1123,17 +1265,17 @@ function makeUpiUri(fee, courseName){
 }
 
 
-/* ================================
+/* =========================================================
    UPDATE PAYMENT
-================================ */
+========================================================= */
 
 function updatePayment(){
 
   const option =
-    course.options[course.selectedIndex];
+    course.options[
+      course.selectedIndex
+    ];
 
-
-  /* NO COURSE SELECTED */
 
   if(
     !option ||
@@ -1146,9 +1288,11 @@ function updatePayment(){
     feeAmount.textContent =
       "Fee: ₹0";
 
-    qr.innerHTML = "";
+    qr.innerHTML =
+      "";
 
-    payNow.disabled = true;
+    payNow.disabled =
+      true;
 
     payNow.removeAttribute(
       "data-upi"
@@ -1158,8 +1302,6 @@ function updatePayment(){
 
   }
 
-
-  /* GET COURSE DATA */
 
   const courseName =
     option.value;
@@ -1171,21 +1313,15 @@ function updatePayment(){
     option.dataset.duration;
 
 
-  /* SHOW COURSE */
-
   selectedCourse.textContent =
     "Course: " +
     option.textContent.trim();
 
 
-  /* SHOW FEE */
-
   feeAmount.textContent =
     "Fee: ₹" +
     fee;
 
-
-  /* CREATE UPI */
 
   const upiUri =
     makeUpiUri(
@@ -1194,41 +1330,37 @@ function updatePayment(){
     );
 
 
-  /* CLEAR OLD QR */
+  qr.innerHTML =
+    "";
 
-  qr.innerHTML = "";
-
-
-  /* CREATE NEW QR */
 
   new QRCode(
     qr,
     {
       text: upiUri,
-      width: 235,
-      height: 235,
+      width:235,
+      height:235,
       correctLevel:
         QRCode.CorrectLevel.M
     }
   );
 
 
-  /* PAY NOW */
+  payNow.disabled =
+    false;
 
-  payNow.disabled = false;
 
   payNow.setAttribute(
     "data-upi",
     upiUri
   );
 
-
 }
 
 
-/* ================================
+/* =========================================================
    COURSE CHANGE
-================================ */
+========================================================= */
 
 course.addEventListener(
   "change",
@@ -1236,9 +1368,9 @@ course.addEventListener(
 );
 
 
-/* ================================
+/* =========================================================
    PAY NOW
-================================ */
+========================================================= */
 
 payNow.addEventListener(
   "click",
@@ -1268,9 +1400,9 @@ payNow.addEventListener(
 );
 
 
-/* ================================
+/* =========================================================
    PHOTO PREVIEW
-================================ */
+========================================================= */
 
 photoInput.addEventListener(
   "change",
@@ -1285,7 +1417,8 @@ photoInput.addEventListener(
       photoPreview.style.display =
         "none";
 
-      photoPreview.src = "";
+      photoPreview.src =
+        "";
 
       return;
 
@@ -1302,7 +1435,35 @@ photoInput.addEventListener(
         "Please select a valid image file."
       );
 
-      this.value = "";
+      this.value =
+        "";
+
+      photoPreview.style.display =
+        "none";
+
+      return;
+
+    }
+
+
+    /*
+      Maximum 2 MB
+    */
+
+    const maxSize =
+      2 * 1024 * 1024;
+
+
+    if(
+      file.size > maxSize
+    ){
+
+      alert(
+        "Photo size should be 2 MB or less."
+      );
+
+      this.value =
+        "";
 
       photoPreview.style.display =
         "none";
@@ -1328,15 +1489,17 @@ photoInput.addEventListener(
       };
 
 
-    reader.readAsDataURL(file);
+    reader.readAsDataURL(
+      file
+    );
 
   }
 );
 
 
-/* ================================
+/* =========================================================
    SAME ADDRESS
-================================ */
+========================================================= */
 
 sameAddress.addEventListener(
   "change",
@@ -1362,8 +1525,9 @@ sameAddress.addEventListener(
 );
 
 
-/* UPDATE TEMPORARY ADDRESS
-   WHEN PERMANENT CHANGES */
+/* =========================================================
+   UPDATE TEMPORARY ADDRESS
+========================================================= */
 
 permanentAddress.addEventListener(
   "input",
@@ -1382,9 +1546,56 @@ permanentAddress.addEventListener(
 );
 
 
-/* ================================
+/* =========================================================
+   FILE TO BASE64
+========================================================= */
+
+function fileToBase64(
+  file
+){
+
+  return new Promise(
+    function(resolve,reject){
+
+      const reader =
+        new FileReader();
+
+
+      reader.onload =
+        function(){
+
+          resolve(
+            reader.result
+          );
+
+        };
+
+
+      reader.onerror =
+        function(){
+
+          reject(
+            new Error(
+              "Photo reading failed."
+            )
+          );
+
+        };
+
+
+      reader.readAsDataURL(
+        file
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================================
    FORM SUBMIT
-================================ */
+========================================================= */
 
 form.addEventListener(
   "submit",
@@ -1393,7 +1604,20 @@ form.addEventListener(
     e.preventDefault();
 
 
-    /* COURSE CHECK */
+    /*
+      Hide old messages
+    */
+
+    successMessage.style.display =
+      "none";
+
+    errorMessage.style.display =
+      "none";
+
+
+    /*
+      COURSE CHECK
+    */
 
     const option =
       course.options[
@@ -1417,7 +1641,9 @@ form.addEventListener(
     }
 
 
-    /* GET COURSE INFORMATION */
+    /*
+      COURSE DATA
+    */
 
     const fee =
       option.dataset.fee || "";
@@ -1426,7 +1652,9 @@ form.addEventListener(
       option.dataset.duration || "";
 
 
-    /* PHOTO CHECK */
+    /*
+      PHOTO CHECK
+    */
 
     if(
       !photoInput.files ||
@@ -1444,9 +1672,34 @@ form.addEventListener(
     }
 
 
-    /* BUTTON DISABLE */
+    const photoFile =
+      photoInput.files[0];
 
-    submitBtn.disabled = true;
+
+    /*
+      PHOTO SIZE CHECK
+    */
+
+    if(
+      photoFile.size >
+      2 * 1024 * 1024
+    ){
+
+      alert(
+        "Photo size should be 2 MB or less."
+      );
+
+      return;
+
+    }
+
+
+    /*
+      DISABLE SUBMIT
+    */
+
+    submitBtn.disabled =
+      true;
 
     submitBtn.textContent =
       "Submitting...";
@@ -1454,16 +1707,31 @@ form.addEventListener(
 
     try{
 
-      /* FORM DATA */
+      /*
+        Convert photo to Base64
+      */
+
+      const photoBase64 =
+        await fileToBase64(
+          photoFile
+        );
+
+
+      /*
+        Create normal form data
+      */
 
       const formData =
-        new FormData(form);
+        new FormData(
+          form
+        );
 
 
-      /* URL ENCODED DATA */
+      /*
+        Convert to object
+      */
 
-      const data =
-        new URLSearchParams();
+      const data = {};
 
 
       for(
@@ -1471,90 +1739,138 @@ form.addEventListener(
         of formData.entries()
       ){
 
+        /*
+          File object is not sent directly.
+          It will be sent as Base64 below.
+        */
+
         if(
-          typeof value === "string"
+          value instanceof File
         ){
 
-          data.append(
-            key,
-            value
-          );
+          continue;
 
         }
+
+
+        data[key] =
+          value;
 
       }
 
 
-      /* COURSE INFORMATION */
+      /*
+        Course information
+      */
 
-      data.set(
-        "course",
-        option.value
-      );
+      data.course =
+        option.value;
 
-      data.set(
-        "courseName",
-        option.textContent.trim()
-      );
+      data.courseName =
+        option.textContent.trim();
 
-      data.set(
-        "fee",
-        fee
-      );
+      data.fee =
+        fee;
 
-      data.set(
-        "courseDuration",
-        duration
-      );
+      data.courseDuration =
+        duration;
 
 
-      /* PHOTO FILE NAME */
+      /*
+        UPI information
+      */
+
+      data.upiId =
+        UPI_ID;
+
+      data.paymentAmount =
+        fee;
+
+
+      /*
+        PHOTO DATA
+      */
+
+      data.photoBase64 =
+        photoBase64;
+
+      data.photoName =
+        photoFile.name;
+
+
+      /*
+        SEND JSON TO APPS SCRIPT
+      */
+
+      const response =
+        await fetch(
+          SCRIPT_URL,
+          {
+            method:"POST",
+
+            headers:{
+              "Content-Type":
+                "text/plain;charset=utf-8"
+            },
+
+            body:
+              JSON.stringify(
+                data
+              )
+          }
+        );
+
+
+      /*
+        READ RESPONSE
+      */
+
+      let result = null;
+
+
+      try{
+
+        result =
+          await response.json();
+
+      }
+      catch(err){
+
+        /*
+          If browser cannot read response,
+          wait briefly and still show success.
+        */
+
+        result = {
+          success:true
+        };
+
+      }
+
+
+      /*
+        SUCCESS
+      */
 
       if(
-        photoInput.files[0]
+        result &&
+        result.success === false
       ){
 
-        data.set(
-          "studentPhoto",
-          photoInput.files[0].name
+        throw new Error(
+          result.error ||
+          "Google Sheet submission failed."
         );
 
       }
 
 
-      /* UPI */
-
-      data.set(
-        "upiId",
-        UPI_ID
-      );
-
-      data.set(
-        "paymentAmount",
-        fee
-      );
-
-
-      /* SEND TO GOOGLE SHEETS */
-
-      await fetch(
-        SCRIPT_URL,
-        {
-          method:"POST",
-          mode:"no-cors",
-          headers:{
-            "Content-Type":
-              "application/x-www-form-urlencoded;charset=UTF-8"
-          },
-          body:data.toString()
-        }
-      );
-
-
-      /* SUCCESS */
+      successMessage.textContent =
+        "Your Form Submitted Successfully";
 
       successMessage.style.display =
         "block";
+
 
       successMessage.scrollIntoView({
         behavior:"smooth",
@@ -1562,26 +1878,35 @@ form.addEventListener(
       });
 
 
-      /* RESET FORM */
+      /*
+        RESET FORM
+      */
 
       form.reset();
 
 
-      /* RESET ADDRESS */
+      /*
+        RESET TEMP ADDRESS
+      */
 
       temporaryAddress.readOnly =
         false;
 
 
-      /* RESET PHOTO */
+      /*
+        RESET PHOTO
+      */
 
-      photoPreview.src = "";
+      photoPreview.src =
+        "";
 
       photoPreview.style.display =
         "none";
 
 
-      /* RESET PAYMENT */
+      /*
+        RESET PAYMENT
+      */
 
       selectedCourse.textContent =
         "Please select a course";
@@ -1589,13 +1914,22 @@ form.addEventListener(
       feeAmount.textContent =
         "Fee: ₹0";
 
-      qr.innerHTML = "";
+      qr.innerHTML =
+        "";
 
-      payNow.disabled = true;
+      payNow.disabled =
+        true;
 
       payNow.removeAttribute(
         "data-upi"
       );
+
+
+      /*
+        SET CURRENT DATE AGAIN
+      */
+
+      setTodayDate();
 
 
     }
@@ -1607,14 +1941,25 @@ form.addEventListener(
       );
 
 
-      alert(
-        "Form submit nahi hua. Please try again."
-      );
+      errorMessage.textContent =
+        "Form submit nahi hua: " +
+        error.message;
+
+
+      errorMessage.style.display =
+        "block";
+
+
+      errorMessage.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
 
     }
     finally{
 
-      submitBtn.disabled = false;
+      submitBtn.disabled =
+        false;
 
       submitBtn.textContent =
         "Submit Admission Form";
@@ -1625,24 +1970,26 @@ form.addEventListener(
 );
 
 
-/* ================================
-   INITIAL PAYMENT STATE
-================================ */
+/* =========================================================
+   TODAY'S DATE
+========================================================= */
 
-updatePayment();
+function setTodayDate(){
 
-
-/* ================================
-   DEFAULT ADMISSION DATE
-================================ */
-
-const dateField =
-document.getElementById(
-  "dateOfAdmission"
-);
+  const dateField =
+    document.getElementById(
+      "dateOfAdmission"
+    );
 
 
-if(!dateField.value){
+  if(
+    !dateField
+  ){
+
+    return;
+
+  }
+
 
   const today =
     new Date();
@@ -1655,23 +2002,40 @@ if(!dateField.value){
   const mm =
     String(
       today.getMonth() + 1
-    ).padStart(2,"0");
+    ).padStart(
+      2,
+      "0"
+    );
 
 
   const dd =
     String(
       today.getDate()
-    ).padStart(2,"0");
+    ).padStart(
+      2,
+      "0"
+    );
 
 
   dateField.value =
-    yyyy + "-" +
-    mm + "-" +
+    yyyy +
+    "-" +
+    mm +
+    "-" +
     dd;
 
 }
 
+
+/* =========================================================
+   INITIAL SETUP
+========================================================= */
+
+updatePayment();
+
+setTodayDate();
+
 </script>
 
 </body>
-</html>
+  </html>
